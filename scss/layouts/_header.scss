@@ -1,0 +1,99 @@
+.header {
+  position: relative;
+  transition: all 0.4s ease;
+  &--inner {
+    padding: 30px 0;
+  }
+  &--sidebar {
+    background-color: $color-white;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__btn {
+      font-size: 25px;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @include respond(desktops) {
+    &--inner {
+      padding: 30px 0;
+    }
+  }
+  @include respond(laptops) {
+    &--inner {
+      padding: 30px 0;
+    }
+    &--sidebar {
+      width: 55px;
+      height: 55px;
+      &__btn {
+        font-size: 15px;
+      }
+    }
+  }
+  @include respond(tablets) {
+    &--inner {
+      padding: 15px 0;
+    }
+    &--sidebar {
+      position: static;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      &__btn {
+        font-size: 20px;
+      }
+    }
+    .row.sidebar-sm {
+      margin-right: 5px;
+      justify-content: space-between;
+    }
+  }
+
+  @include respond(phones) {
+    &--inner {
+      padding: 18px 0;
+    }
+    .row.sidebar-sm {
+      margin-right: 0;
+    }
+    &--sidebar {
+      width: 40px;
+      height: 40px;
+      &__btn {
+        font-size: 15px;
+      }
+    }
+  }
+  @include respond(phones-sm) {
+  }
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-decoration: none;
+  color: black;
+  &--img {
+    max-height: 40px;
+  }
+  &--title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.6rem;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

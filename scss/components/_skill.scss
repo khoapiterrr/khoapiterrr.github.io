@@ -1,0 +1,15 @@
+.skill-box {
+  ul {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+  }
+  .box-title {
+    padding: 15px 0;
+  }
+  @include respond(tablets) {
+    hr {
+      display: none;
+    }
+  }
+}

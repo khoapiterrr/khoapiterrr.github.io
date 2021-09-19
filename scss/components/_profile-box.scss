@@ -1,0 +1,169 @@
+.profile-card {
+  background: $color-web-3;
+  background: linear-gradient(
+    160deg,
+    rgba($color-web-3, 0.7) 0%,
+    rgba($color-web-2, 0.8) 45%,
+    rgba($color-web-1, 0.9) 100%
+  );
+  padding: 10px;
+  text-align: center;
+  color: $color-white;
+  .avatar-animation {
+    padding: 0 15px;
+    padding-top: 25px;
+    transition: all 1s cubic-bezier(0.08, 0.83, 0.93, 0.22);
+    &__avatar {
+      padding: 30px;
+      width: 85%;
+      margin: 0 auto;
+      position: relative;
+      margin-bottom: 2rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      cursor: pointer;
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        vertical-align: middle;
+        transition: all 0.45s ease 0s;
+        // object-fit: cover;
+        position: absolute; /* Take your picture out of the flow */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; /* Make the picture taking the size of it's parent */
+        width: 100%; /* This if for the object-fit */
+        height: 100%; /* This if for the object-fit */
+        object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+        object-position: center;
+      }
+      .avatar-1 {
+        transform: rotate(0deg);
+      }
+      .avatar-2 {
+        opacity: 0;
+        visibility: hidden;
+        transform: rotate(0);
+      }
+      &:hover {
+        .avatar-1 {
+          transform: rotate(360deg);
+          opacity: 0;
+          visibility: hidden;
+        }
+        .avatar-2 {
+          opacity: 1;
+          visibility: visible;
+          transform: rotate(360deg);
+        }
+      }
+
+      @include respond(tablets) {
+        & {
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  &__info {
+    h2 {
+      font-size: 1.6rem;
+      display: inline-block;
+      border-bottom: 3px double $color-white;
+      margin-bottom: 0.688em;
+    }
+  }
+  &__social {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.profile-box {
+  max-width: 295px;
+  min-width: 280px;
+  padding-right: 15px;
+  @include respond(tablets) {
+    & {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+.social-profiles {
+  display: flex;
+  justify-content: center;
+  .item {
+    list-style: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color-white;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-white;
+      transform: scale(1.05);
+      a {
+        color: $color-web;
+
+        span {
+          opacity: 1;
+          visibility: visible;
+          color: $color-white;
+          top: -35px;
+          left: -15px;
+          width: 130px;
+          height: auto;
+          font-weight: 400;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $color-white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        overflow: hidden;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        transform: translateX(-40px);
+      }
+    }
+  }
+}
+.cv-box {
+  padding: 20px;
+  background-color: $color-white;
+  padding-bottom: 30px;
+  width: 100%;
+  .btn-cv {
+    width: 80%;
+    margin: 0 auto;
+    display: inherit;
+    color: $color-white;
+  }
+}

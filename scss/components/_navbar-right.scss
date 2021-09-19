@@ -1,0 +1,40 @@
+.nav-right {
+  padding: 10px;
+  height: 100%;
+  max-width: 295px;
+  min-width: 280px;
+  transition: 0.4s;
+  background-color: rgb(196, 239, 247);
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  color: white;
+  z-index: 22;
+  overflow: auto;
+
+  &-hidden {
+    transform: translateX(120%);
+  }
+  .contact-me {
+    color: $color-black;
+    td:first-child {
+      padding: 10px 0;
+      padding-right: 5px;
+    }
+  }
+}
+#crtSidebarClose {
+  position: absolute;
+  top: 20px;
+  right: 300px;
+  width: 35px;
+  height: 35px;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

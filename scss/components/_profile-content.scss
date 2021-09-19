@@ -1,0 +1,8 @@
+.profile-content {
+  transition: all 1s ease-in-out;
+  @include respond(tablets) {
+    & {
+      width: 100%;
+    }
+  }
+}

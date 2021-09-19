@@ -1,0 +1,36 @@
+@mixin respond($breakpoint) {
+  /* Extra small devices (phones, 600px and down) */
+  @if $breakpoint == phones-sm {
+    @media (max-width: 575.98px) {
+      @content;
+    } //<600px
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @if $breakpoint == phones {
+    @media (max-width: 767.98px) {
+      @content;
+    } //600px->768px
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @if $breakpoint == tablets {
+    @media (max-width: 991.98px) {
+      @content;
+    } //768px->992px
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @if $breakpoint == laptops {
+    @media (max-width: 1199.98px) {
+      @content;
+    } //992px->1200px
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @if $breakpoint == desktops {
+    @media (min-width: 1200px) {
+      @content;
+    } //>1200px
+  }
+}

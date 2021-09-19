@@ -1,0 +1,25 @@
+body {
+  font-family: 'Delius', handwriting;
+  background-color: $bg-web;
+  line-height: 1.4em;
+  letter-spacing: 0.08em;
+  width: 100%;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+.ltk-logo {
+  font-family: 'Pacifico', handwriting;
+}
+@for $i from 1 through 6 {
+  h#{$i},
+  .h#{$i} {
+    font-family: 'Cabin Sketch', display;
+    color: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+}

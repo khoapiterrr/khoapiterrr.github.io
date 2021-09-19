@@ -1,0 +1,15 @@
+.wrapper-interested {
+  width: 100%;
+  .interested {
+    width: 100%;
+
+    &-item {
+      padding: 15px;
+
+      .icon {
+        font-size: 110%;
+        color: $color-web-1;
+      }
+    }
+  }
+}
